@@ -1,0 +1,29 @@
+<%- include('partials/layout-head') -%> 
+<%- include('partials/navbar') -%>		
+
+		<div id="loginwrap">
+			<div class="container">
+				<div class="row centered">
+					<div class="col-xs-6 col-md-4"></div>
+					<div class="col-xs-6 col-md-4">
+						<div class="message">
+							<% if (message.length > 0) { %>
+								<div class="alert alert-danger" role="alert">
+			 						<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+			  						<span class="sr-only">Error:</span>
+			 						<%= message %>
+								</div>
+							<% } %>
+						</div>
+						<form class="form-login" role="form" action="/auth/login" method="POST">
+							<input type="text" class="form-control" name="username" placeholder="Username" required="true">
+						    <input type="password" class="form-control" name="password" placeholder="Password" required="true">
+						 	<button type="submit" class="btn btn-warning btn-lg">Log In</button>
+						</form>					
+					</div>
+					<div class="col-xs-6 col-md-4"></div>
+				</div><!-- /row -->
+			</div><!-- /container -->
+		</div><!-- /headerwrap -->
+
+<%- include('partials/layout-foot') -%> 

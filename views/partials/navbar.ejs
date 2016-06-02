@@ -1,0 +1,21 @@
+		<!-- Fixed navbar -->
+	    <div class="navbar navbar-default navbar-fixed-top">
+	      <div class="container">
+	        <div class="navbar-header">
+		        <% if (!user) { %>
+		          <a class="navbar-brand" href="/auth"><b>My Web App</b></a>
+		        <% } else { %>
+		          <a class="navbar-brand" href="/"><b>My Web App</b></a>
+		        <% } %>
+	        </div>
+	        <div class='navbar-action'>
+	          <ul class="nav navbar-nav navbar-right">
+	          	<% if (!user) { %>
+	            	<li><a href="/auth/login">Log In</a></li>
+				<% } else { %>
+	            	<li><a href="/auth/logout">Log Out</a></li>
+	         	<% } %>
+	          </ul>
+	        </div>
+	      </div>
+	    </div>

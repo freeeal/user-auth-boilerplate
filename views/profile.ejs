@@ -1,0 +1,21 @@
+<%- include('partials/layout-head') -%>
+<%- include('partials/navbar') -%>
+
+			<div id="content"></div>
+<!-- 		<div id="reviewwrap"> -->
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-8">
+						<% if (user) { %>
+							<h1>Hi <%= user.local.username %></h1>
+							<h3>What the fuck is up?</h3>
+						<% } %>
+					</div>
+				</div><!-- /row -->
+			</div><!-- /container -->
+		<!-- </div> -->
+
+		<div id='root'>
+		</div>
+
+<%- include('partials/layout-foot') -%>
