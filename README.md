@@ -1,2 +1,1 @@
-# coffeeNoted
-## node.js boilerplate with basic user authentication
+### node.js boilerplate with basic user authentication
