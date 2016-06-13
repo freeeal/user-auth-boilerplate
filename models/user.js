@@ -4,7 +4,6 @@
 // Creating Mongoose Model
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-var passportLocalMongoose = require('passport-local-mongoose');
 // Local Authentication Strategy of Passport and authenticate the users against a 
 // locally configured Mongo DB instance, storing the user details in the database.
 var bcrypt = require('bcrypt');
@@ -47,7 +46,5 @@ UserSchema.methods.validPassword = function(password) {
 UserSchema.set('toJSON', { getters: true, virtuals: true });	// forces Mongoose to include getters (def: which modify existing data before outputting the documents to the next layer)
 // when converting the MongoDB document to a JSON representation and will allow the output of documents using res.json()
 // to include the getter's behavior
-
-UserSchema.plugin(passportLocalMongoose);
 
 module.exports = mongoose.model('User', UserSchema);
